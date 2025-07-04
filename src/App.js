@@ -161,11 +161,47 @@ function App() {
         )}
       </div>
       {/* HERO SECTION */}
-      <section className="hero-landing-section">
+      <section className="hero-landing-section compact-hero">
         <div className="hero-content">
           <h1>Endless Possibilities with Orion LED</h1>
           <p>Leading LED display manufacturer in India, trusted since 2015. From highways to hotels, malls to metros—we light up spaces nationwide with custom, weatherproof LED screens.</p>
           <button className="hero-cta-btn" onClick={handleScrollToProjects}>View Projects</button>
+        </div>
+      </section>
+      {/* OUR PRODUCTS SECTION */}
+      <section className="products-carousel-section">
+        <h2 className="products-carousel-title">Our Products</h2>
+        <div className="products-carousel">
+          <div className="carousel-track">
+            <div className="product-card">
+              <img src="https://workdrive.zohopublic.in/folder/mmvjk10ee86e5e0574e4f8528ef5033021d3b" alt="Orion Bellatrix Series" />
+              <span>Orion Bellatrix Series</span>
+            </div>
+            <div className="product-card">
+              <img src="https://workdrive.zohopublic.in/folder/zn2qyc31a77e1cd464785bd41d2a6a9702f06" alt="Orion Betelgeuse Series" />
+              <span>Orion Betelgeuse Series</span>
+            </div>
+            <div className="product-card">
+              <img src="https://workdrive.zohopublic.in/folder/zn2qya7d3290a96924c989c52a185a56fa484" alt="Orion Digital Standee" />
+              <span>Orion Digital Standee</span>
+            </div>
+            <div className="product-card">
+              <img src="https://workdrive.zohopublic.in/folder/zn2qy6f061d51b25746789b93253144e1a0a7" alt="Orion Flexible Series" />
+              <span>Orion Flexible Series</span>
+            </div>
+            <div className="product-card">
+              <img src="https://workdrive.zohopublic.in/folder/zn2qy2230f69a85a14725b3f442da5555c68f" alt="Orion Jumbo Series" />
+              <span>Orion Jumbo Series</span>
+            </div>
+            <div className="product-card">
+              <img src="https://workdrive.zohopublic.in/folder/3rhq3bd8891402e544ff0aa61941eae8f3bb5" alt="Orion Rental Series" />
+              <span>Orion Rental Series</span>
+            </div>
+            <div className="product-card">
+              <img src="https://workdrive.zohopublic.in/folder/p8plma1ca0e13b3a2434c9e938a590a1dcd96" alt="Orion Rigel Series" />
+              <span>Orion Rigel Series</span>
+            </div>
+          </div>
         </div>
       </section>
       {/* PROJECTS SECTION */}
@@ -260,25 +296,44 @@ function App() {
       </div>
       <main className="main-content">
         {activeSection === 'about' && (
-          <section className="about-section">
-            <h2>Who We Are</h2>
-            <h3>We Deliver The Best Digital Signage Solutions</h3>
-            <div className="about-stats">
-              <div className="stat">
-                <span className="stat-number">100+</span>
-                <span className="stat-label">Installations</span>
+          <section className="about-section enhanced-about">
+            <div className="about-content-wrapper">
+              <div className="about-left">
+                <h2>Who We Are</h2>
+                <h3>We Deliver The Best Digital Signage Solutions</h3>
+                <div className="about-stats">
+                  <div className="stat">
+                    <span className="stat-icon" role="img" aria-label="installations">🏢</span>
+                    <span className="stat-number">100+</span>
+                    <span className="stat-label">Installations</span>
+                  </div>
+                  <div className="stat">
+                    <span className="stat-icon" role="img" aria-label="offices">📍</span>
+                    <span className="stat-number">6</span>
+                    <span className="stat-label">Offices in India</span>
+                  </div>
+                </div>
+                <div className="about-narrative">
+                  <p><strong>What's making you stop from creating unforgettable visual experiences that set your brand apart?</strong></p>
+                  <p>Is it that you are still using the old traditional way of marketing your brand? Or do you feel that operating and managing digital LED screens can be complex for you?</p>
+                  <p>But in today's fast-paced world, if you want your brand to outstand your competitors then our digital signage solutions can be the best choice for you.</p>
+                  <p>We at <strong>Atenti Origins Photoelectricity Consort Private Limited (AOPCPL)</strong> provide a wide range of LED display solutions that will master you in the art of captivating audiences and transforming spaces. Our LED screens are the best in technology, hardware, and quality.</p>
+                  <p>From airports, transportation, corporate offices, and malls to retail, hotels, and events, we provide tailor-made digital signage solutions of customized shapes and sizes for each client. Our expert engineers and designers work directly with you to make your vision a reality.</p>
+                </div>
+                <button className="about-cta-btn">Contact Us</button>
               </div>
-              <div className="stat">
-                <span className="stat-number">6</span>
-                <span className="stat-label">Offices in India</span>
+              <div className="about-right">
+                <img src="https://orion-led.com/assets/img/logo-white.png" alt="Company Team Logo" className="about-image" />
+                <div className="about-timeline">
+                  <h4>Milestones</h4>
+                  <ul>
+                    <li><span className="timeline-dot"></span> 2015: Company Founded</li>
+                    <li><span className="timeline-dot"></span> 2017: 50+ Installations</li>
+                    <li><span className="timeline-dot"></span> 2020: Expanded to 6 Offices</li>
+                    <li><span className="timeline-dot"></span> 2023: 100+ Installations</li>
+                  </ul>
+                </div>
               </div>
-            </div>
-            <div className="about-narrative">
-              <p><strong>What's making you stop from creating unforgettable visual experiences that set your brand apart?</strong></p>
-              <p>Is it that you are still using the old traditional way of marketing your brand? Or do you feel that operating and managing digital LED screens can be complex for you?</p>
-              <p>But in today's fast-paced world, if you want your brand to outstand your competitors then our digital signage solutions can be the best choice for you.</p>
-              <p>We at <strong>Atenti Origins Photoelectricity Consort Private Limited (AOPCPL)</strong> provide a wide range of LED display solutions that will master you in the art of captivating audiences and transforming spaces. Our LED screens are the best in technology, hardware, and quality.</p>
-              <p>From airports, transportation, corporate offices, and malls to retail, hotels, and events, we provide tailor-made digital signage solutions of customized shapes and sizes for each client. Our expert engineers and designers work directly with you to make your vision a reality.</p>
             </div>
           </section>
         )}
