@@ -160,7 +160,7 @@ function App() {
             className={`nav-btn drafts-btn${activeSection === 'drafts' ? ' active' : ''}`}
             onClick={() => handleNavClick('drafts')}
           >
-            <span role="img" aria-label="drafts">📝</span> Drafts
+            <span role="img" aria-label="drafts">📝</span> Quotes
           </button>
         </div>
       </nav>
@@ -337,48 +337,7 @@ function App() {
         )}
       </div>
       <main className="main-content">
-        {activeSection === 'about' && (
-          <section className="about-section enhanced-about" ref={aboutSectionRef}>
-            <div className="about-content-wrapper">
-              <div className="about-left">
-                <h2>Who We Are</h2>
-                <h3>We Deliver The Best Digital Signage Solutions</h3>
-                <div className="about-stats">
-                  <div className="stat">
-                    <span className="stat-icon" role="img" aria-label="installations">🏢</span>
-                    <span className="stat-number">100+</span>
-                    <span className="stat-label">Installations</span>
-                  </div>
-                  <div className="stat">
-                    <span className="stat-icon" role="img" aria-label="offices">📍</span>
-                    <span className="stat-number">6</span>
-                    <span className="stat-label">Offices in India</span>
-                  </div>
-                </div>
-                <div className="about-narrative">
-                  <p><strong>What's making you stop from creating unforgettable visual experiences that set your brand apart?</strong></p>
-                  <p>Is it that you are still using the old traditional way of marketing your brand? Or do you feel that operating and managing digital LED screens can be complex for you?</p>
-                  <p>But in today's fast-paced world, if you want your brand to outstand your competitors then our digital signage solutions can be the best choice for you.</p>
-                  <p>We at <strong>Atenti Origins Photoelectricity Consort Private Limited (AOPCPL)</strong> provide a wide range of LED display solutions that will master you in the art of captivating audiences and transforming spaces. Our LED screens are the best in technology, hardware, and quality.</p>
-                  <p>From airports, transportation, corporate offices, and malls to retail, hotels, and events, we provide tailor-made digital signage solutions of customized shapes and sizes for each client. Our expert engineers and designers work directly with you to make your vision a reality.</p>
-                </div>
-                <button className="about-cta-btn">Contact Us</button>
-              </div>
-              <div className="about-right">
-                <img src="https://orion-led.com/assets/img/logo-white.png" alt="Company Team Logo" className="about-image" />
-                <div className="about-timeline">
-                  <h4>Milestones</h4>
-                  <ul>
-                    <li><span className="timeline-dot"></span> 2015: Company Founded</li>
-                    <li><span className="timeline-dot"></span> 2017: 50+ Installations</li>
-                    <li><span className="timeline-dot"></span> 2020: Expanded to 6 Offices</li>
-                    <li><span className="timeline-dot"></span> 2023: 100+ Installations</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </section>
-        )}
+        {activeSection === 'about' && null}
         {activeSection === 'products' && (
           <section className="hero-section">
             {/* Products section content to be added later */}
@@ -393,6 +352,58 @@ function App() {
           </section>
         )}
       </main>
+      {/* Add footer at the bottom of the landing page */}
+      <footer className="orion-footer">
+        <div className="footer-container">
+          <div className="footer-col logo-col">
+            <img src="https://orion-led.com/assets/img/logo-white.png" alt="Orion LED Logo" className="footer-logo" />
+            <div className="footer-company">
+              <img src="https://orion-led.com/assets/img/atlogo.png" alt="Atenti Origins Logo" className="footer-atenti-logo" />
+            </div>
+            <p className="footer-desc">
+              (Orion LED – Endless Possibilities)<br/>
+              Leading LED display manufacturer in India, trusted since 2015. From highways to hotels, malls to metros—<br/>
+              we light up spaces nationwide with custom, weatherproof LED screens.<br/>
+              Headquartered in Delhi | Factory in Noida
+            </p>
+          </div>
+          <div className="footer-col">
+            <h3>SOLUTIONS</h3>
+            <ul>
+              <li>Retail</li>
+              <li>Corporate</li>
+              <li>DOOH</li>
+              <li>Entertainment</li>
+              <li>Event</li>
+              <li>Hotel</li>
+            </ul>
+          </div>
+          <div className="footer-col">
+            <h3>INDUSTRY APPLICATIONS</h3>
+            <ul>
+              <li>Indoor LED Display</li>
+              <li>Outdoor LED Display</li>
+              <li>Rental LED Display</li>
+            </ul>
+          </div>
+          <div className="footer-col">
+            <h3>CONTACT US</h3>
+            <ul className="footer-contact">
+              <li><span role="img" aria-label="location">📍</span> REGD. OFFICE : DELHI: 504, 5th Floor ABW Elegance Tower, Jasola District Centre, Jasola, New Delhi - 110025</li>
+              <li>Branch Office : Mumbai, Hyderabad, Lucknow</li>
+              <li>Factory : B10, Sector 88, Noida, 201301</li>
+              <li><span role="img" aria-label="phone">📞</span> TEL: +918826888050</li>
+              <li><span role="img" aria-label="email">✉️</span> Email: sales@orion-led.com</li>
+              <li className="footer-socials">
+                <a href="#" aria-label="Facebook">f</a>
+                <a href="#" aria-label="YouTube">▶</a>
+                <a href="#" aria-label="LinkedIn">in</a>
+                <a href="#" aria-label="Instagram">&#128247;</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
