@@ -15,10 +15,16 @@ function App() {
   ]);
   const [userInput, setUserInput] = useState('');
   const projectsRef = useRef(null);
+  const aboutSectionRef = useRef(null);
 
   const handleNavClick = (section) => {
     setActiveSection(section);
     if (section !== 'profile') setShowProfile(false);
+    if (section === 'about' && aboutSectionRef.current) {
+      setTimeout(() => {
+        aboutSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
   };
 
   const handleScrollToProjects = () => {
@@ -120,6 +126,14 @@ function App() {
     setSelectedProject(null);
   };
 
+  const handleAddToDraft = (product) => {
+    window.location.href = `/draft/${encodeURIComponent(product)}`;
+  };
+
+  const handleViewDetail = (product) => {
+    window.location.href = `/detail/${encodeURIComponent(product)}`;
+  };
+
   return (
     <div className="App">
       <nav className="navbar">
@@ -174,32 +188,60 @@ function App() {
         <div className="products-carousel">
           <div className="carousel-track">
             <div className="product-card">
-              <img src="https://workdrive.zohopublic.in/folder/mmvjk10ee86e5e0574e4f8528ef5033021d3b" alt="Orion Bellatrix Series" />
+              <img src="/Bellatrix  SMD .png" alt="Orion Bellatrix Series" />
               <span>Orion Bellatrix Series</span>
+              <div className="product-card-btns">
+                <button className="add-btn" onClick={() => handleAddToDraft('Orion Bellatrix Series')}>Add</button>
+                <button className="detail-btn" onClick={() => handleViewDetail('Orion Bellatrix Series')}>Detail</button>
+              </div>
             </div>
             <div className="product-card">
-              <img src="https://workdrive.zohopublic.in/folder/zn2qyc31a77e1cd464785bd41d2a6a9702f06" alt="Orion Betelgeuse Series" />
+              <img src="/Betelgeuse COB.png" alt="Orion Betelgeuse Series" />
               <span>Orion Betelgeuse Series</span>
+              <div className="product-card-btns">
+                <button className="add-btn" onClick={() => handleAddToDraft('Orion Betelgeuse Series')}>Add</button>
+                <button className="detail-btn" onClick={() => handleViewDetail('Orion Betelgeuse Series')}>Detail</button>
+              </div>
             </div>
             <div className="product-card">
-              <img src="https://workdrive.zohopublic.in/folder/zn2qya7d3290a96924c989c52a185a56fa484" alt="Orion Digital Standee" />
+              <img src="/Digital Standee .png" alt="Orion Digital Standee" />
               <span>Orion Digital Standee</span>
+              <div className="product-card-btns">
+                <button className="add-btn" onClick={() => handleAddToDraft('Orion Digital Standee')}>Add</button>
+                <button className="detail-btn" onClick={() => handleViewDetail('Orion Digital Standee')}>Detail</button>
+              </div>
             </div>
             <div className="product-card">
-              <img src="https://workdrive.zohopublic.in/folder/zn2qy6f061d51b25746789b93253144e1a0a7" alt="Orion Flexible Series" />
+              <img src="/Flexible .png" alt="Orion Flexible Series" />
               <span>Orion Flexible Series</span>
+              <div className="product-card-btns">
+                <button className="add-btn" onClick={() => handleAddToDraft('Orion Flexible Series')}>Add</button>
+                <button className="detail-btn" onClick={() => handleViewDetail('Orion Flexible Series')}>Detail</button>
+              </div>
             </div>
             <div className="product-card">
-              <img src="https://workdrive.zohopublic.in/folder/zn2qy2230f69a85a14725b3f442da5555c68f" alt="Orion Jumbo Series" />
+              <img src="/Jumbo .png" alt="Orion Jumbo Series" />
               <span>Orion Jumbo Series</span>
+              <div className="product-card-btns">
+                <button className="add-btn" onClick={() => handleAddToDraft('Orion Jumbo Series')}>Add</button>
+                <button className="detail-btn" onClick={() => handleViewDetail('Orion Jumbo Series')}>Detail</button>
+              </div>
             </div>
             <div className="product-card">
-              <img src="https://workdrive.zohopublic.in/folder/3rhq3bd8891402e544ff0aa61941eae8f3bb5" alt="Orion Rental Series" />
+              <img src="/Rental .png" alt="Orion Rental Series" />
               <span>Orion Rental Series</span>
+              <div className="product-card-btns">
+                <button className="add-btn" onClick={() => handleAddToDraft('Orion Rental Series')}>Add</button>
+                <button className="detail-btn" onClick={() => handleViewDetail('Orion Rental Series')}>Detail</button>
+              </div>
             </div>
             <div className="product-card">
-              <img src="https://workdrive.zohopublic.in/folder/p8plma1ca0e13b3a2434c9e938a590a1dcd96" alt="Orion Rigel Series" />
+              <img src="/Rigel .png" alt="Orion Rigel Series" />
               <span>Orion Rigel Series</span>
+              <div className="product-card-btns">
+                <button className="add-btn" onClick={() => handleAddToDraft('Orion Rigel Series')}>Add</button>
+                <button className="detail-btn" onClick={() => handleViewDetail('Orion Rigel Series')}>Detail</button>
+              </div>
             </div>
           </div>
         </div>
@@ -296,7 +338,7 @@ function App() {
       </div>
       <main className="main-content">
         {activeSection === 'about' && (
-          <section className="about-section enhanced-about">
+          <section className="about-section enhanced-about" ref={aboutSectionRef}>
             <div className="about-content-wrapper">
               <div className="about-left">
                 <h2>Who We Are</h2>
